@@ -66,4 +66,15 @@ VALUES
   ('Escova dental', 'Faça uma limpeza profunda com a tecnologia inovadora', 1000, 44, 5),
   ('Balde para lixo 50l', 'Possui tampa e fabricado com material reciclado', 2290, 55, 5),
   ('Manga', 'Rico em Vitamina A, potássio e vitamina C', 198, 176, 1),
-  ('Uva', 'NÃO CONTÉM GLÚTEN.', 420, 90, 1)
+  ('Uva', 'NÃO CONTÉM GLÚTEN.', 420, 90, 1);
+
+INSERT INTO clientes(cpf, nome) VALUES
+('80371350042', 'José Augusto Silva'),
+('67642869061', 'Antonio Oliveira'),
+('63193310034', 'Ana Rodrigues'),
+('75670505018', 'Maria da Conceição');
+
+INSERT INTO vendedores(cpf, nome) VALUES
+('82539841031', 'Rodrigo Sampaio'),
+('23262546003', 'Beatriz Souza Santos'),
+('28007155023', 'Carlos Eduardo');
