@@ -94,3 +94,20 @@ UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 1) WHERE id
 UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 6) WHERE id = 11;
 UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 1) WHERE id = 15;
 UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 5) WHERE id = 2;
+
+INSERT INTO pedidos(valor, cliente_cpf, vendedor_cpf) VALUES
+(6460,'63193310034', '23262546003'); --falta somar 
+
+INSERT INTO itens_do_pedido(pedido_id, quantidade, produto_id) VALUES 
+(2, 10, 17), 
+(2, 3, 18), 
+(2, 5, 1), 
+(2, 10, 5), 
+(2, 2, 6); 
+
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 10) WHERE id = 17;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 3) WHERE id = 18;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 5) WHERE id = 1;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 10) WHERE id = 5;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 2) WHERE id = 6;
+
