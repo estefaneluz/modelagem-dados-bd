@@ -157,3 +157,20 @@ UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 3) WHERE id
 UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 8) WHERE id = 5;
 UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 2) WHERE id = 11;
 
+SELECT produtos.id, produtos.nome, categoria_id, categorias.nome AS categoria_nome 
+FROM produtos LEFT JOIN categorias ON produtos.categoria_id = categorias.id
+ORDER BY produtos.id ASC;
+
+SELECT pedidos.id, valor, cliente_cpf, vendedor_cpf, 
+clientes.nome AS cliente_nome, vendedores.nome AS vendedor_nome 
+FROM pedidos JOIN clientes ON pedidos.cliente_cpf = clientes.cpf
+JOIN vendedores ON pedidos.vendedor_cpf = vendedores.cpf
+ORDER BY pedidos.id ASC;
+
+SELECT categorias.nome AS categoria_nome, SUM(quantidade_em_estoque) AS categoria_qtd_estoque 
+FROM categorias JOIN produtos ON produtos.categoria_id = categorias.id
+GROUP BY categorias.nome;
+
+SELECT nome, SUM(quantidade) AS quantidade_vendida FROM produtos
+JOIN itens_do_pedido ON produtos.id = itens_do_pedido.produto_id
+GROUP BY nome ORDER BY sum(quantidade) DESC;
