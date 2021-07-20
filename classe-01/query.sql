@@ -78,3 +78,19 @@ INSERT INTO vendedores(cpf, nome) VALUES
 ('82539841031', 'Rodrigo Sampaio'),
 ('23262546003', 'Beatriz Souza Santos'),
 ('28007155023', 'Carlos Eduardo');
+
+INSERT INTO pedidos(valor, cliente_cpf, vendedor_cpf) VALUES
+(9650,'80371350042', '28007155023');
+
+INSERT INTO itens_do_pedido(pedido_id, quantidade, produto_id) VALUES 
+(1, 1, 1),
+(1, 1, 10),
+(1, 6, 11), 
+(1, 1, 15), 
+(1, 5, 2); 
+
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 1) WHERE id = 1;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 1) WHERE id = 10;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 6) WHERE id = 11;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 1) WHERE id = 15;
+UPDATE produtos SET quantidade_em_estoque = (quantidade_em_estoque - 5) WHERE id = 2;
